@@ -51,13 +51,13 @@ class LiquidIngredient implements Ingredient{
 
 class Recipe<T extends Ingredient>{
     private String name;
-    private ArrayList<String> instructions = new ArrayList<>();
-    private ArrayList<T> ingredients = new ArrayList<>();
+    private ArrayList<String> instructions;
+    private ArrayList<T> ingredients;
 
     public Recipe(String name, ArrayList<String> instructions, ArrayList<T> ingredients){
         this.name = name;
-        this.instructions = instructions;
-        this.ingredients = ingredients;
+        this.instructions = new ArrayList<>();
+        this.ingredients = new ArrayList<>();
     }
     public void addIngredient(T ing){
         ingredients.add(ing);
